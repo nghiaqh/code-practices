@@ -31,6 +31,7 @@ class LinkedList {
    * Add a new Node to Linked List
    * @param {*} data value for the new Node
    * @param {Number|null} location location to insert the new Node, if null, add to last place
+   * @returns {null}
    */
   push (data, location = null) {
     let i = 0
@@ -48,12 +49,41 @@ class LinkedList {
       }
     }
 
-    const newNode = new Node(data, currentNode ? currentNode.next : null)
+    const newNode = data instanceof Node ? data : new Node(data, currentNode ? currentNode.next : null)
+
     if (currentNode !== null) {
       currentNode.next = newNode
     } else {
       this.head = newNode
     }
+  }
+
+  /**
+   * Find a node at which 2 linked lists intersect
+   * @param {LinkedList} listA linked list a
+   * @param {LinkedList} listB linked list b
+   * @returns {Node} a node
+   */
+  static findIntersection (listA, listB) {
+    let nodeA = listA.head
+    let nodeB = listB.head
+
+    if (nodeA === null || nodeB === null) return null
+    if (nodeA === nodeB) return nodeA
+
+    while (nodeA.next) {
+      while (nodeB.next) {
+        if (nodeB.next === nodeA) {
+          console.log(nodeA, nodeB)
+          return nodeA
+        }
+        nodeB = nodeB.next
+      }
+      nodeA = nodeA.next
+      nodeB = listB.head
+    }
+
+    return null
   }
 }
 
