@@ -1,0 +1,26 @@
+{
+  "name": "code-practices",
+  "version": "1.0.0",
+  "description": "## Data Structures",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nghiaqh/code-practices.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nghiaqh/code-practices/issues"
+  },
+  "homepage": "https://github.com/nghiaqh/code-practices#readme",
+  "devDependencies": {
+    "jest": "^24.7.1",
+    "standard": "^12.0.1"
+  },
+  "standard": {
+    "env": [ "jest" ]
+  }
+}
