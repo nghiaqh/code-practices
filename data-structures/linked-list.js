@@ -28,7 +28,7 @@ class LinkedList {
   }
 
   /**
-   * Add a new Node to Linked List
+   * Add a new Node to the Linked List
    * @param {*} data value for the new Node
    * @param {Number|null} location location to insert the new Node, if null, add to last place
    * @returns {null}
@@ -56,6 +56,36 @@ class LinkedList {
     } else {
       this.head = newNode
     }
+  }
+
+  /**
+   * Remove last node from the linked list
+   * @returns {Node}
+   */
+  pop () {
+    let tail = this.head
+    let node = this.head
+
+    while (node !== null && node.next !== null) {
+      tail = node
+      node = node.next
+    }
+    tail.next = null
+    return node
+  }
+
+  /**
+   * Return number of nodes in the linked list
+   */
+  size () {
+    let node = this.head
+    let i = 0
+    while (node !== null) {
+      i++
+      node = node.next
+    }
+
+    return i
   }
 
   /**

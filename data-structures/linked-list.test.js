@@ -36,6 +36,34 @@ test('Push a new Node to a Linked List', () => {
   })
 })
 
+test('Pop the last node from a Linked List', () => {
+  const list = new LinkedList()
+  list.push(1)
+  list.push(2)
+  list.push(3)
+  expect(list.pop()).toEqual({
+    data: 3,
+    next: null
+  })
+  expect(list).toEqual({
+    head: {
+      data: 1,
+      next: {
+        data: 2,
+        next: null
+      }
+    }
+  })
+  expect(list.pop()).toEqual({
+    data: 2,
+    next: null
+  })
+  expect(list.pop()).toEqual({
+    data: 1,
+    next: null
+  })
+})
+
 test('Find intersection of 2 singly linked lists', () => {
   const listA = new LinkedList()
   const listB = new LinkedList()
@@ -64,4 +92,11 @@ test('Find intersection of 2 singly linked lists', () => {
 
   const c1 = LinkedList.findIntersectionNode(listA, listB)
   expect(c1).toEqual(listA.head.next)
+})
+
+test('Get number of nodes in a linked list', () => {
+  const list = new LinkedList()
+  expect(list.size()).toEqual(0)
+  list.push(1)
+  expect(list.size()).toEqual(1)
 })
