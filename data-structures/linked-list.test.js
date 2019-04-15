@@ -36,7 +36,7 @@ test('Push a new Node to a Linked List', () => {
   })
 })
 
-test('Find intersection of 2 singlyu linked lists', () => {
+test('Find intersection of 2 singly linked lists', () => {
   const listA = new LinkedList()
   const listB = new LinkedList()
   listA.push('a1')
@@ -49,6 +49,19 @@ test('Find intersection of 2 singlyu linked lists', () => {
   listB.push('b3')
   listB.push(listA.head.next.next)
 
-  const c1 = LinkedList.findIntersection(listA, listB)
+  const c1 = LinkedList.findIntersectionNode(listA, listB)
   expect(c1).toEqual(listA.head.next.next)
+})
+
+test('Find intersection of 2 singly linked lists', () => {
+  const listA = new LinkedList()
+  const listB = new LinkedList()
+  listA.push('a1')
+  listA.push('c1')
+  listA.push('c2')
+  listA.push('c3')
+  listB.push(listA.head.next)
+
+  const c1 = LinkedList.findIntersectionNode(listA, listB)
+  expect(c1).toEqual(listA.head.next)
 })

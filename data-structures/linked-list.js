@@ -60,23 +60,21 @@ class LinkedList {
 
   /**
    * Find a node at which 2 linked lists intersect
+   * O(N)
    * @param {LinkedList} listA linked list a
    * @param {LinkedList} listB linked list b
    * @returns {Node} a node
    */
-  static findIntersection (listA, listB) {
+  static findIntersectionNode (listA, listB) {
     let nodeA = listA.head
     let nodeB = listB.head
 
     if (nodeA === null || nodeB === null) return null
     if (nodeA === nodeB) return nodeA
 
-    while (nodeA.next) {
-      while (nodeB.next) {
-        if (nodeB.next === nodeA) {
-          console.log(nodeA, nodeB)
-          return nodeA
-        }
+    while (nodeA) {
+      while (nodeB) {
+        if (nodeB === nodeA) return nodeA
         nodeB = nodeB.next
       }
       nodeA = nodeA.next
