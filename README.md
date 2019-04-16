@@ -2,14 +2,13 @@
 
 ## Data Structures
 
-* Array
-* Linked List
+* Array - x
+* Linked List - x
 * Binary Tree, Binary Search Tree, Red-Black Tree
 * Heap
 * Hash Table
-* Stack
+* Stack - x
 * Queue
-* Trie
 * Graph (both directed and undirected)
 
 ## Algorithms
