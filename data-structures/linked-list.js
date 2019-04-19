@@ -18,13 +18,8 @@ class Node {
 }
 
 class LinkedList {
-  constructor (data) {
-    if (data) {
-      const node = (data, null)
-      this.head = node
-    } else {
-      this.head = null
-    }
+  constructor () {
+    this.head = null
   }
 
   /**
@@ -60,7 +55,7 @@ class LinkedList {
 
   /**
    * Remove last node from the linked list
-   * @returns {Node}
+   * @returns {Node} last node
    */
   pop () {
     let tail = this.head
@@ -76,6 +71,7 @@ class LinkedList {
 
   /**
    * Return number of nodes in the linked list
+   * @returns {Number} an integer
    */
   size () {
     let node = this.head

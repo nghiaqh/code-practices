@@ -4,11 +4,11 @@
 
 * Array - x
 * Linked List - x
-* Binary Tree, Binary Search Tree, Red-Black Tree
-* Heap
+* Binary Tree x, Binary Search Tree x, Red-Black Tree
+* Heap - x
 * Hash Table
 * Stack - x
-* Queue
+* Queue - x
 * Graph (both directed and undirected)
 
 ## Algorithms
