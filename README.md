@@ -9,7 +9,7 @@
 * Hash Table
 * Stack - x
 * Queue - x
-* Graph (both directed and undirected)
+* Graph (both directed and undirected) - x
 
 ## Algorithms
 
@@ -21,8 +21,8 @@
 
 ## Traversals (On multiple data structures)
 
-* Depth First Search
-* Breadth First Search
+* Depth First Search x
+* Breadth First Search x
 
 ## Object Oriented Design
 
